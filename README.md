@@ -10,7 +10,49 @@ Features
 --------
 
 - Code without annoyng semicolons;
-- and without the $ preceding variables.
+- and the $ preceding variables.
+
+Example
+-------
+
+file.cap
+
+````
+echo "hello!\n"
+
+variableWithNumbers10 = 10
+
+VariableA = 'yes'
+varB = 'no'
+
+if (VariableA == varB)
+	echo 'yes!'
+else
+	echo 'no!'
+````
+
+Then run:
+
+`$ php canary file.cap`
+
+The output is (file.php):
+
+
+```
+<?php
+echo "hello!\n";
+
+$variableWithNumbers10 = 10;
+
+$VariableA = 'yes';
+$varB = 'no';
+
+if ($VariableA == $varB)
+	echo 'yes!';
+else
+	echo 'no!';
+
+```
 
 Warning
 -------
