@@ -1,11 +1,6 @@
-#!/usr/bin/php
 <?php
 
-try {
-	$canary = new Canary;
-} catch (Exception $e) {
-	echo Ansi::tagsToColors("\r\n<red>Aw snap: {$e->getMessage()}\r\n");
-}
+namespace SaguiTech;
 
 class Canary {
 	private $inputFile, $outputFile, $contents;

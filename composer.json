@@ -1,0 +1,32 @@
+{
+	"name": "saguitech/canary",	
+	"description": "Canary is a cleaner version of the PHP language, like SASS for CSS, or TypeScript to Javascript, etc.",
+	"homepage": "https://github.com/SaguiTech/Canary",
+	"license": "MIT",
+	"authors": [
+	  {
+	    "name": "Cabele Oliveira",
+	    "email": "becalebe@gmail.com",
+	    "homepage": "http://calebeoliveira.com.br/",
+	    "role": "Developer"
+	  }
+  ],  
+	"require": {
+		"php": ">= 5.3",
+		"simoneast/simple-ansi-colors": "dev-master"
+	},		
+	"bin": [
+		"bin/canary"
+	],
+	"autoload": {
+	  "psr-4": {
+	  	"SaguiTech\\": "src/SaguiTech"
+	  }
+  },  
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/SimonEast/Simple-Ansi-Colors"
+    }
+  ]
+}
