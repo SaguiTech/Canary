@@ -5,9 +5,8 @@ namespace SaguiTech;
 class Canary {
 	private $inputFile, $outputFile, $contents;
 
-	public function __construct($inputFile = null) {
-		global $argc, $argv;
-		$this->inputFile = isset($inputFile) && !empty($inputFile) ? $inputFile : $argv[1];
+	public function __construct($inputFile) {
+		$this->inputFile = $inputFile;
 		$this->outputFile = substr($this->inputFile, 0, strpos($this->inputFile, '.')).'.php';
 		$this->contents = file_get_contents($this->inputFile);
 
