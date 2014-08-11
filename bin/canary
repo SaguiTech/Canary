@@ -1,0 +1,17 @@
+#!/usr/bin/php
+<?php
+
+foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+	if (file_exists($file)) {
+	  define('CANARY_COMPOSER_INSTALL', $file);
+	  break;
+	}
+}
+
+require CANARY_COMPOSER_INSTALL;
+
+try {
+	$canary = new \SaguiTech\Canary;
+} catch (Exception $e) {
+	echo Ansi::tagsToColors("\r\n<red>Aw snap: {$e->getMessage()}\r\n");
+}

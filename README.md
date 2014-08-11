@@ -33,7 +33,7 @@ else
 
 Then run:
 
-`$ php canary file.cap`
+`$ php vendor/bin/canary file.cap`
 
 The output is (file.php):
 
