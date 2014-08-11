@@ -33,7 +33,7 @@ else
 
 Then run:
 
-`$ php vendor/bin/canary file.cap`
+`$ php bin/canary.php run examples/file.cap`
 
 The output is (file.php):
 
@@ -52,6 +52,12 @@ if ($VariableA == $varB)
 else
 	echo 'no!';
 
+```
+
+Other commands
+--------------
+```shell
+php bin/canary.php run -h
 ```
 
 Warning
