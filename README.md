@@ -9,7 +9,7 @@ by SaguiTech's team. Don't use it for production.
 Features
 --------
 
-- Code without annoyng semicolons;
+- Code without annoying semicolons;
 - and the $ preceding variables.
 
 Example
