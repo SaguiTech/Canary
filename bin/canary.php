@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 
 foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
@@ -10,8 +10,9 @@ foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoloa
 
 require CANARY_COMPOSER_INSTALL;
 
-try {
-	$canary = new \SaguiTech\Canary;
-} catch (Exception $e) {
-	echo Ansi::tagsToColors("\r\n<red>Aw snap: {$e->getMessage()}\r\n");
-}
+use Symfony\Component\Console\Application;
+use SaguiTech\Console\Command\WriteOutCommand;
+
+$application = new Application();
+$application->add(new WriteOutCommand);
+$application->run();

@@ -13,7 +13,7 @@
   ],  
 	"require": {
 		"php": ">= 5.3",
-		"simoneast/simple-ansi-colors": "dev-master"
+		"symfony/console": "2.6.*@dev"
 	},		
 	"bin": [
 		"bin/canary"
@@ -22,11 +22,5 @@
 	  "psr-4": {
 	  	"SaguiTech\\": "src/SaguiTech"
 	  }
-  },  
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/SimonEast/Simple-Ansi-Colors"
-    }
-  ]
+  }
 }
