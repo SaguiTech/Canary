@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"authors": [
 	  {
-	    "name": "Cabele Oliveira",
+	    "name": "Calebe Oliveira",
 	    "email": "becalebe@gmail.com",
 	    "homepage": "http://calebeoliveira.com.br/",
 	    "role": "Developer"
@@ -15,6 +15,9 @@
 		"php": ">= 5.3",
 		"symfony/console": "2.6.*@dev"
 	},		
+	"require-dev": {
+    "kherge/box": "~2.4"
+  },
 	"bin": [
 		"bin/canary"
 	],
