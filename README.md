@@ -23,9 +23,9 @@ mv canary.phar /usr/local/bin/canary
 
 (or)
 
-You can clone this repository and build using the [box-project](http://box-project.org/)
+You can be cloning this repository and build using the [box-project](http://box-project.org/)
 ```shell
-git clone <https://github.com/jonataa/Canary.git>
+git clone https://github.com/jonataa/Canary.git
 php vendor/bin/box build
 chmod +x canary.phar
 mv canary.phar /usr/local/bin/canary
