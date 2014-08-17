@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use SaguiTech\Console\Command\WriteOutCommand;
+
+$application = new Application('Canary', '@canary_version@');
+$application->add(new WriteOutCommand);
+$application->run();

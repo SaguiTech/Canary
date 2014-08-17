@@ -1,0 +1,18 @@
+{
+	"chmod": "0755",
+	"directories": ["src"],
+	"files": [
+  	"LICENSE"
+  ],
+  "finder": [
+	  {
+	    "name": "*.php",
+	    "exclude": ["Tests"],
+	    "in": "vendor"
+	  }
+  ],  
+  "git-version": "canary_version",
+	"main": "bin/canary",
+	"output": "canary.phar",
+	"stub": true
+}
