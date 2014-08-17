@@ -16,7 +16,7 @@ Installation
 ------------
 We distribute a [PHP Archive (PHAR)](http://php.net/phar) that has all required dependencies of Canary bundled in single file:
 ```shell
-wget https://jonataa.github.io/phar/canary.phar
+wget https://jonataa.github.io/downloads/canary.phar
 chmod +x canary.phar
 mv canary.phar /usr/local/bin/canary
 ```
