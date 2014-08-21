@@ -12,6 +12,30 @@ Features
 - Code without annoying semicolons;
 - and the $ preceding variables.
 
+Installation
+------------
+We distribute a [PHP Archive (PHAR)](http://php.net/phar) that has all required dependencies of Canary bundled in single file:
+```shell
+wget https://jonataa.github.io/downloads/canary.phar
+chmod +x canary.phar
+mv canary.phar /usr/local/bin/canary
+```
+
+(or)
+
+You can be cloning this repository and build using the [box-project](http://box-project.org/)
+```shell
+git clone https://github.com/jonataa/Canary.git
+php vendor/bin/box build
+chmod +x canary.phar
+mv canary.phar /usr/local/bin/canary
+```
+
+Check the installation:
+```shell
+canary --version
+```
+
 Example
 -------
 
@@ -33,10 +57,9 @@ else
 
 Then run:
 
-`$ php vendor/bin/canary file.cap`
+`$ canary run file.cap`
 
 The output is (file.php):
-
 
 ```
 <?php
@@ -52,6 +75,12 @@ if ($VariableA == $varB)
 else
 	echo 'no!';
 
+```
+
+Other commands
+--------------
+```shell
+canary run -h
 ```
 
 Warning

@@ -1,17 +1,11 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 
-foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
-	if (file_exists($file)) {
-	  define('CANARY_COMPOSER_INSTALL', $file);
-	  break;
-	}
-}
+require __DIR__ . '/../vendor/autoload.php';
 
-require CANARY_COMPOSER_INSTALL;
+use Symfony\Component\Console\Application;
+use SaguiTech\Console\Command\WriteOutCommand;
 
-try {
-	$canary = new \SaguiTech\Canary;
-} catch (Exception $e) {
-	echo Ansi::tagsToColors("\r\n<red>Aw snap: {$e->getMessage()}\r\n");
-}
+$application = new Application('Canary', '@canary_version@');
+$application->add(new WriteOutCommand);
+$application->run();
