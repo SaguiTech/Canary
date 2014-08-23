@@ -20,22 +20,22 @@ class CanaryTest extends AbstractTest
 		$this->assertTrue(file_exists($inputFile));
 		$this->assertTrue(file_exists($outputFile));
 		$contentsOutput = file_get_contents($outputFile);		
-		$this->assertEquals($this->canary->run($inputFile), $contentsOutput);
+		$this->assertEquals($contentsOutput, $this->canary->run($inputFile));
 	}
 
 	public function testBindVariables($contents = "foo = 'bar';")
 	{
-		$this->assertEquals($this->canary->bindVariables($contents), "\$foo = 'bar';");
+		$this->assertEquals("\$foo = 'bar';", $this->canary->bindVariables($contents));
 	}
 
 	public function testAddSemiColons($contents = "\$foo = 'bar'\n\$bar = 'foo'")
 	{
-		$this->assertEquals($this->canary->addSemiColons($contents), "\$foo = 'bar';\n\$bar = 'foo';");
+		$this->assertEquals("\$foo = 'bar';\n\$bar = 'foo';", $this->canary->addSemiColons($contents));
 	}
 
 	public function testAddOpenTag($contents = "echo 'Hello World'")
 	{
-		$this->assertEquals($this->canary->addOpenTag($contents), "<?php\necho 'Hello World'");
+		$this->assertEquals("<?php\necho 'Hello World'", $this->canary->addOpenTag($contents));
 	}
 
 }

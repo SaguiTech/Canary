@@ -43,8 +43,8 @@ class Canary {
 		return $this->contents = "<?php\n".$contents;
 	}
 
-	public function getOutputFile()
-	{	return $this->outputFile;
+	public function getOutputFile()	{
+		return $this->outputFile;
 	}
 
 }
