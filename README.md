@@ -3,8 +3,9 @@ Canary
 
 Canary is a cleaner version of the PHP language, for a faster development.
 
-The current version is highly unstable, and is under development
-by SaguiTech's team. Don't use it for production.
+Warning: The current version is highly unstable, and is under development by SaguiTech's team. Don't use it for production.
+
+[![Build Status](https://travis-ci.org/SaguiTech/Canary.svg)](https://travis-ci.org/SaguiTech/Canary)
 
 Features
 --------
