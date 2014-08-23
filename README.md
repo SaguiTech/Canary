@@ -16,15 +16,16 @@ Installation
 ------------
 You can be cloning this repository and build a [PHP Archive (PHAR)](http://php.net/phar) using the [box-project](http://box-project.org/)
 ```shell
-git clone https://github.com/SaguiTech/Canary.git
-php vendor/bin/box build
-chmod +x canary.phar
-mv canary.phar /usr/local/bin/canary
+$ git clone https://github.com/SaguiTech/Canary.git
+$ composer update
+$ php vendor/bin/box build
+$ chmod +x canary.phar
+$ mv canary.phar /usr/local/bin/canary
 ```
 
 Check the installation:
 ```shell
-canary --version
+$ canary --version
 ```
 
 Example
@@ -71,7 +72,13 @@ else
 Other commands
 --------------
 ```shell
-canary run -h
+$ canary run -h
+```
+
+Running the tests
+-----------------
+```shell
+$ php vendor/bin/phpunit --bootstrap vendor/autoload.php tests/
 ```
 
 Warning
