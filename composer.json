@@ -13,7 +13,8 @@
   ],  
 	"require": {
 		"php": ">= 5.3",
-		"symfony/console": "2.6.*@dev"
+		"symfony/console": "2.6.*@dev",
+		"phpunit/phpunit": "4.*"
 	},		
 	"require-dev": {
     "kherge/box": "~2.4"
@@ -23,7 +24,8 @@
 	],
 	"autoload": {
 	  "psr-4": {
-	  	"SaguiTech\\": "src/SaguiTech"
+	  	"SaguiTech\\": "src/SaguiTech",
+	  	"Test\\": "tests"
 	  }
   }
 }

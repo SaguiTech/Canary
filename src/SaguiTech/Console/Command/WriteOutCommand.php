@@ -25,7 +25,8 @@ class WriteOutCommand extends Command
 		if (! file_exists($inputFile))
 			throw new \Exception("File not exists: {$inputFile}", 1);
 
-		$canary = new Canary($inputFile);
+		$canary = new Canary;
+		$canary->run($inputFile);
 
 		if (false === $canary->writeOut())
 			throw new \Exception("Error trying to write to file", 2);
