@@ -9,23 +9,15 @@ by SaguiTech's team. Don't use it for production.
 Features
 --------
 
-- Code without annoyng semicolons;
+- Code without annoying semicolons;
 - and the $ preceding variables.
 
 Installation
 ------------
-We distribute a [PHP Archive (PHAR)](http://php.net/phar) that has all required dependencies of Canary bundled in single file:
+You can be cloning this repository and build a [PHP Archive (PHAR)](http://php.net/phar) using the [box-project](http://box-project.org/)
 ```shell
-wget https://jonataa.github.io/downloads/canary.phar
-chmod +x canary.phar
-mv canary.phar /usr/local/bin/canary
-```
-
-(or)
-
-You can be cloning this repository and build using the [box-project](http://box-project.org/)
-```shell
-git clone https://github.com/jonataa/Canary.git
+git clone https://github.com/SaguiTech/Canary.git
+composer update
 php vendor/bin/box build
 chmod +x canary.phar
 mv canary.phar /usr/local/bin/canary
@@ -41,7 +33,7 @@ Example
 
 file.cap
 
-````
+```
 echo "hello!\n"
 
 variableWithNumbers10 = 10
@@ -53,7 +45,7 @@ if (VariableA == varB)
 	echo 'yes!'
 else
 	echo 'no!'
-````
+```
 
 Then run:
 
@@ -83,7 +75,19 @@ Other commands
 canary run -h
 ```
 
+Running the tests
+-----------------
+```shell
+php vendor/bin/phpunit --bootstrap vendor/autoload.php tests/
+```
+
 Warning
 -------
 
 This code is not tested with many cases. It's under development.
+
+Next steps
+----------
+
+- Implement unit tests;
+- Lexical analysis.
